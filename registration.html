@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        function chk()
+        {
+            {
+            var x = document.f1.mob_no.value;		
+                
+                if (isNaN(x) || x.indexOf(" ")!=-1)
+                {
+                    alert ('Enter Numeric Value Only in Mobile No');
+                    return false;
+                    }
+                if(x.length<10)
+                {
+                    alert('Incomplete Mobile No');
+                    return false;
+                    }
+                if (x.charAt(0) =="1")
+                {
+                    alert ('Mobile No should not start with 1');
+                    return false;
+                    }
+                if (x.charAt(0) =="2")
+                {
+                    alert ('Mobile No should not start with 2');
+                    return false;
+                    }
+                if (x.charAt(0) =="3")
+                {
+                    alert ('Mobile No should not start with 3');
+                    return false;
+                    }
+                if (x.charAt(0) =="4")
+                {
+                    alert ('Mobile No should not start with 4');
+                    return false;
+                    }
+                if (x.charAt(0) =="5")
+                {
+                    alert ('Mobile No should not start with 5');
+                    return false;
+                    }
+                }
+        }
+        </script>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+          <div class="navbar">
+            <div class="logo">
+              <a href="index.html">
+                </a>
+            </div>
+            <nav>
+              <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">About</a></li>
+                
+                <li><a href="Login Page.html"> <img src="images/account.png" alt=""></a></li>
+              </ul>
+            </nav>
+            
+          </div>
+    
+    <div class="background"></div>
+    <div class="container">
+        <h2>Registration</h2>
+        <form name="f1" method="post" onSubmit="return chk();">
+
+            <div class="form-item">
+                <img src="user id.jpg" alt="" width="30" height="20"><input type="text" name="name" id="text" placeholder="Name" style="background-color:#CCCCCC" required>
+			</div>
+			<div class="form-item">
+				<img src="mail.jpg" alt="" width="30" height="20"><input type="email" name="mail_id" id="text" placeholder="Mail Id" style="background-color:#CCCCCC" required>
+			</div>
+            <div class="form-item">		
+				<img src="contarct.jpg" alt="" width="30" height="20"><input type="text" name="mob_no" id="text" placeholder="Contact No" style="background-color:#CCCCCC" required>
+            </div>
+		    <div class="form-item">		
+				<img src="address.jpg" alt="" width="30" height="20"><input type="text" name="address" placeholder="Address" style="background-color:#CCCCCC" required>
+		    </div>
+            <!----<div class="form-item">		
+				<input type="text" name="user_id" id="text" placeholder="User_ID" style="background-color:#CCCCCC" required>
+            </div>-->
+            <div class="form-item">
+                <img src="lock.jpg" alt="" width="30" height="20"><input type="password" name="pass" id="pass" placeholder="Password" style="background-color:#CCCCCC" required>
+            </div>
+
+            <button type="submit" style="background-color:#FF6600"> Register </button>
+			
+            <p><a href="Login Page.html">Back</a></p> 
+        </form>
+
+    </div>
+ 
+</body>
+</html>
